@@ -27,13 +27,13 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'localhost',
-    "https://8000-mishalea-aback-njda0nca93q.ws-eu59.gitpod.io"
+    "https://8000-mishalea-aback-sruuhfymol0.ws-eu62.gitpod.io"
 ]
 
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost:8000",
     "http://127.0.0.1:8000",
-    "https://8000-mishalea-aback-njda0nca93q.ws-eu60.gitpod.io"
+    "https://8000-mishalea-aback-sruuhfymol0.ws-eu62.gitpod.io"
 ]
 
 
@@ -46,18 +46,26 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rooms'
+    'rooms',
+    'accounts',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+    # 'django.middleware.csrf.CsrfViewMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+CORS_ORIGIN_ALLOW_ALL = True
+# CORS_ORIGIN_WHITELIST = (
+#   'https://8000-mishalea-aback-sruuhfymol0.ws-eu62.gitpod.io',
+# )
 
 ROOT_URLCONF = 'project4.urls'
 
