@@ -3,6 +3,9 @@ from django.shortcuts import render, get_object_or_404
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 
+def Home(request):
+    return render(request, "authentication/index.html")
+
 @csrf_exempt
 def AddRooms(request):
     # request type check
