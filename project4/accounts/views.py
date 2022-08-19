@@ -1,41 +1,42 @@
 from django.http import JsonResponse
-from django.http import Httpresponse
-from django.contrib.auth.models import User
+from django.contrib.auth import authenticate
+from django.shortcuts import render
 from django.contrib import messages
-from django.contrib.auth import authenticate, login
-from . import views
+from .models import Account
+# from django.views.decorators.csrf import csrf_exempt
 
+# open the login page in start
+def startPoint(request):
+  return render(request, "authentication/login.html")
+
+# @csrf_exempt
 def login(request):
   if request.method == "POST":
-    userName = request.POST.get['user_name']
-    password = request.POST.get['password']
-  
-    user = authenticate(username=userName, password=password)
-  
+    userEmail = request.POST.get('email')
+    password = request.POST.get('password')
+    
+    user = authenticate(email=userEmail, password=password)
     if user is not None:
-      login(request, user)
-    return JsonResponse({"result": True})
-  else:
-    return JsonResponse({"result": False})
-
+      messages.success(request, "Welcome!")
+      # return JsonResponse({"results": True})
+      return render(request, "authentication/index.html")
+    else:
+      messages.error(request, "Failed to login")
+      return JsonResponse({"results": False})
+  
+  return render(request, "authentication/login.html")
 
 
 def signup(request):
-
+  
   if request.method == "POST":
     userName = request.POST.get('user_name')
     userEmail = request.POST.get('email')
     password = request.POST.get('password')
 
-    user = User.objects.create_user(userName, userEmail, password)
-    user.name = user_name
-    user.email = email
-    user.password = password
-    
+    user = Accounts.objects.create_user(userEmail, userName, password)
     user.save()
 
-    messages.success(request, "Your account has been created successfully.")
-
-    return redirect("signup")
-
-  return JsonResponse({"result": True})
+    return render(request, "authentication/login.html")
+  
+  return render(request, "authentication/signin.html")  
