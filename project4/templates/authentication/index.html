@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home and Accommodation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@1&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <!-- Header added for the logo/link back to home page. Covers Nav as well-->
+        <div class="navbar-div">
+            <a class="Navbar-logo" href="index.html">
+                <h1 id="logo">Smiling Coast Apartments</h1>
+            </a>
+            <nav class="navbarClass">
+                <div class="navbarLinks">
+                    <!--I am trying to make the links in Nav central. I added text-align: senter but it's just off center. -->
+                    <ul id="menu">
+                        <li class="nav-item">
+                            <a href="index.html" class="active">Home</a>
+                            <!--Also includes accommodation types below main image-->
+                        </li>
+                        <li class="nav-item">
+                            <a href="bookings.html"> Bookings</a>
+                            <!--Also includes booking/availabilty options-->
+                        </li>
+                        <li class="nav-item">
+                            <a href="signin.html"> Sign In</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <section>
+        <div class="top-row">
+            <div class="top-column">
+                <img src="../front/assets/images/pool.jpg" alt="pool and sunbeds" class="pool-image">
+            </div>
+            <div class="top-column">
+                <img src="../front/assets/images/pool2.webp" alt="Woman with sunhat and sunglasses" class="pool-2-image">
+            </div>
+        </div>
+    </section>
+    <section id='why-stay-section'>
+        <div>
+            <h2 id="why-stay-title"> Why Stay With Us?</h2>
+        </div>
+        <div class="homeBodyInfoContr">
+            <h5>Smiling Coast Apartments provide a home-from-home feel, with self-catering 2 Bedrooms, kitchen,
+                en-suite and balcony overlooking lush grounds and a secluded swimming pool. It will provide everything
+                you need for a relaxing getaway. Included: Air-Conditioning, back-up generator and 24/7 security.
+                Additional facilities such as a large swimming pool, a private beach and massive grounds we know
+                you and yours will have a wonderful stay. Whether for solo trips, family/friend fun or special
+                occasions,
+                we can cater to your every need.
+            </h5>
+            <div class="row">
+                <div class="column">
+                    <img src="../front/assets/images/bedroom.jpg" alt="bedroom image" id="bedroom-img">
+                </div>
+                <div class="column">
+                    <img src="../front/assets/images/kitchen.jpg" alt="kitchen image" id="kitchen-img">
+                </div>
+                <div class="column">
+                    <img src="../front/assets/images/lounge.jpg" alt="lounge image" id="lounge-img">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="rooms-section">
+        <div>
+            <h2>Standard Room</h2>
+            <h3>£90 p/n</h3>
+            <h3>5 persons</h3>
+            <h3>Standard View</h3>
+            <button type="submit"> <a href="/project4/templates/authentication/bookings.html"> Book Here</a></button>
+            <button type="submit"> Sign In</button>
+            <button type="submit"> Log In </button>
+            <label class="label-text" onclick="_functions()"><a href="#"><i class="fa-solid fa-circle-check"></i></a></label> 
+        </div>
+        <div>
+            <h2>Deluxe Room</h2>
+            <h3>£110 p/n</h3>
+            <h3>5 persons</h3>
+            <h3>Sea Views</h3>
+            <label class="label-text" onclick="_functions()"><a href="#"><i class="fa-solid fa-circle-check"></i></a></label> 
+        </div>
+        <div>
+            <h2>Deluxe Room 2</h2>
+            <h3>£115 p/n</h3>
+            <h3>£110 p/n</h3>
+            <h3>Pool Views</h3>
+            <label class="label-text" onclick="_functions()"><a href="#"><i class="fa-solid fa-circle-check"></i></a></label> 
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <ul class="s-m-links">
+            <!-- social media links -->
+            <li>
+                <a href="https://facebook.com" target="_blank" rel="noopener"
+                    aria-label="Visit our Facebook page (opens in a new tab)"><i class="fa-brands fa-facebook"></i></a>
+            </li>
+            <li>
+                <a href="https://instagram.com" target="_blank" rel="noopener"
+                    aria-label="Visit our instagram page (opens in a new tab)"><i
+                        class="fa-brands fa-instagram"></i></a>
+            </li>
+            <li>
+                <a href="https://youtube.com" target="_blank" rel="noopener"
+                    aria-label="Visit our youtube page (opens in a new tab)"><i class="fa-brands fa-youtube"></i></a>
+            </li>
+        </ul>
+
+        <span class="footer-contact">
+            <div>Email smilingcoastapartments@gmail.com</div>
+        </span>
+
+    </footer>
+    <script src="https://kit.fontawesome.com/c44ac9f8c2.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
