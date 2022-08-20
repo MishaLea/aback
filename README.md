@@ -67,3 +67,5 @@ Structure:
 -	The home screen will have one or two main images just under the navigation bar. Followed by a brief paragraph on the apartments and what is provided. Below this will be a few images to show the aesthestics of the apartments and finally, the footer will include 3 social media links. Facebook, insta and Youtube.  
 -	The bookings page will start off with an medium/large sized image leading in to the information regarding bookings and links to Contact Us and Terms and Conditions. This leads in to the booking form, with the footer ending the 2nd browser page. 
 -	The Sign/Up and Login pages will look similar with same layout. A footer will be on the lower section of both pages with links to either login on sign up page or log out on log in page. 
+
+![pool data](/repository/templates/authentication/pool.jpg raw=true "Employee Data title")
