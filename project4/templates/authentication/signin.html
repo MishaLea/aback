@@ -11,6 +11,63 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@1&display=swap" rel="stylesheet">
     <script src="signin.js"></script>
+    <style>
+        * Sign Up page */ .signup-section {
+            /* This worked to increase space between footer border and sign up section */
+            margin-bottom: 200px;
+            padding-bottom: 20px;
+        }
+
+        .signup-section h2 {
+            text-align: center;
+            text-transform: uppercase;
+            border-bottom: white 2px solid;
+            margin-top: 25px;
+            padding-top: 25px;
+            padding-bottom: 25px;
+            color: white;
+        }
+
+        .signup-box {
+            background-color: orange;
+
+        }
+
+        .s-m-links {
+            text-align: center;
+            list-style-type: none;
+            height: 100px;
+            border-top: white 2px solid;
+            padding-top: 5%;
+        }
+
+        .s-m-links>li {
+            display: inline;
+        }
+
+        .s-m-links i {
+            font-size: 200%;
+            color: ivory;
+            padding-left: 7%;
+            padding-right: 7%;
+            margin: 1%;
+        }
+
+        @media screen and (max-width: 1100px) {
+
+            .navbarClass {
+                height: 0px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                border-bottom: 100px;
+                flex-wrap: wrap;
+                align-content: flex-end;
+                align-items: baseline;
+            }
+        }
+    </style>
+
 </head>
 
 <body>
@@ -23,7 +80,7 @@
         <div class="signup-box">
             <h2>Sign Up</h2>
             <h4>It's free and only takes a minute</h4>
-            <form action="/signin" class = "form-2" method="post">
+            <form action="/signin" class="form-2" method="post">
                 <label>Name</label>
                 <input type="text" id="signin_name" name="user_name" placeholder="Enter name" Required>
                 <label>Email</label>
@@ -61,7 +118,7 @@
         <span class="footer-contact">
             <h3>Email smilingcoastapartments@gmail.com</h3>
         </span>
-    
+
     </footer>
 
     <script src="https://kit.fontawesome.com/c44ac9f8c2.js" crossorigin="anonymous"></script>

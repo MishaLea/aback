@@ -9,9 +9,64 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@1&display=swap" rel="stylesheet">
-    <link href="style.css" type="text/css"></link>
+    <link href="style.css" type="text/css">
+    </link>
     <style>
-        
+        .login-box {
+            width: 360px;
+            height: 280px;
+            margin: auto;
+            border-radius: 3px;
+            color: black;
+            background-color: orange;
+        }
+
+        .login-box h3 {
+            color: white;
+            text-align: center;
+            text-transform: uppercase;
+            padding-top: 2.5%;
+            padding-bottom: 2.5%;
+            border-bottom: white 2px solid;
+        }
+
+        .login-box label {
+            color: white;
+        }
+
+        input[type="button"] {
+            width: 320px;
+            height: 35px;
+            margin-top: 20px;
+            border: none;
+            background-color: #49c1a2;
+            font-size: 18px;
+        }
+
+        p {
+            text-align: center;
+            padding-top: 5px;
+            font-size: 15px;
+        }
+
+        .para-2 {
+            text-align: center;
+            color: orange;
+            font-size: 15px;
+            margin-top: 4px;
+        }
+
+        .para-2 a {
+            color: #49c1a2;
+        }
+
+        .footer-contact {
+            text-align: center;
+        }
+
+        .footer-login {
+            margin-top: 263px;
+        }
     </style>
 </head>
 
@@ -29,7 +84,7 @@
         </form>
     </div>
     <p class="para-2">Don't have an account? <a href="signin.html">Sign Up here</a></p>
-    <footer class ="footer-login">
+    <footer class="footer-login">
         <!-- I can't navigate the home page footer well so im trying another style on this page. -->
         <ul class="s-m-links">
             <!-- social media links -->
@@ -47,11 +102,11 @@
                     aria-label="Visit our youtube page (opens in a new tab)"><i class="fa-brands fa-youtube"></i></a>
             </li>
         </ul>
-    
-    <span class="footer-contact">
-        <h3>Email smilingcoastapartments@gmail.com</h3>
-    </span>
-    
+
+        <span class="footer-contact">
+            <h3>Email smilingcoastapartments@gmail.com</h3>
+        </span>
+
     </footer>
     <script src="https://kit.fontawesome.com/c44ac9f8c2.js" crossorigin="anonymous"></script>
 
@@ -61,18 +116,18 @@
             let formData = new FormData();
             formData.append('email', document.getElementById('loginEmailInput').value);
             formData.append('password', document.getElementById('loginpasswordInput').value);
-            
+
             const options = {
-                method: 'POST', 
+                method: 'POST',
                 mode: 'cors',
-                body: formData  
+                body: formData
             };
-            
+
             fetch("https://8000-mishalea-aback-vyy3649uck1.ws-eu62.gitpod.io/login/", options)
-            .then(res => res.json())
-            .then(response => {
-            console.log(response)
-            })
+                .then(res => res.json())
+                .then(response => {
+                    console.log(response)
+                })
         }
     </script>
 </body>

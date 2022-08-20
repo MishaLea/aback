@@ -1,0 +1,918 @@
+/* Included an import link for font from google */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@1&family=Mouse+Memoirs&display=swap');
+
+/* Changed font to one style (Josefin Sans - Italic) with sans-serfi as back up. */
+body {
+    background-color: #344a72;
+    font-family: 'Josefin-Sans', 'sans-serif';
+    font-style: italic;
+    color: ivory;
+}
+
+h1 {
+    color: ivory;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 15px;
+}
+
+h4 {
+    color: ivory;
+    text-align: center;
+}
+
+h5 {
+    font-size: clamp (5px, 2px + 20vw, 30px);
+}
+
+a {
+    text-decoration: none;
+    color: ivory;
+}
+
+header,
+footer {
+    border: red 2px solid;
+}
+
+section {
+    border: greenyellow 2px solid;
+}
+
+
+/* Sign up/ Log out page */
+
+form {
+    /* make sure not to istake with the sign up/login form */
+    width: 300px;
+    margin-left: 20px;
+}
+
+form label {
+    display: flex;
+    margin-top: 15px;
+    font-size: 18px;
+}
+
+form input {
+    width: 100%;
+    padding: 7px;
+    border: none;
+    border: 1px solid gray;
+    border-radius: 6px;
+    outline: none;
+}
+
+
+input[type="button"] {
+    width: 320px;
+    height: 35px;
+    margin-top: 20px;
+    border: none;
+    background-color: #49c1a2;
+    font-size: 18px;
+}
+
+p {
+    text-align: center;
+    padding-top: 5px;
+    font-size: 15px;
+}
+
+.para-2 {
+    text-align: center;
+    color: orange;
+    font-size: 15px;
+    margin-top: 4px;
+}
+
+.para-2 a {
+    color: #49c1a2;
+}
+
+.signup-box {
+    width: 360px;
+    height: 620px;
+    margin: auto;
+    padding-bottom: 7px;
+    color: black;
+    background-color: white;
+    border-radius: 3px;
+}
+
+.signup-box label {
+    color: white;
+}
+
+/* .signup-box p {
+    padding-bottom: 1px;
+} */
+
+.login-box {
+    width: 360px;
+    height: 280px;
+    margin: auto;
+    border-radius: 3px;
+    color: black;
+    background-color: orange;
+}
+
+.login-box h3 {
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+    border-bottom: white 2px solid;
+}
+
+.login-box label {
+    color: white;
+}
+
+
+/* Logo & Nav Bar */
+
+#logo {
+    font-size: clamp(2rem, 1rem + 5vw, 5rem);
+   
+}
+
+.Navbar-logo {
+    text-decoration: none !important;
+}
+
+#menu {
+    font-size: clamp (10px, 10px + 50vw, 100px);
+}
+
+#menu li {
+    list-style-type: none;
+    float: left;
+    padding-left: 104px;
+    text-align: center;
+}
+
+#menu a {
+    text-decoration: none;
+}
+
+#menu a:hover {
+    border-bottom: ivory 2px solid;
+    border-top: ivory 2px solid;
+}
+
+.active {
+    color: ivory;
+    border-bottom: ivory 2px solid;
+}
+
+/* Nav bar font color to be changed to similar ivory. */
+
+.navbar-div {
+    height: 230px;
+    border-bottom: white 2px solid;
+}
+
+.navbarClass {
+    height: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-bottom: 100px;
+    align-content: center;
+}
+
+.navbarLinks {
+    display: flex;
+    align-items: center;
+    margin-left: -100px;
+}
+
+.navbarLinks>div {
+    color: ivory;
+}
+
+.navbarLinks a {
+    color: ivory;
+}
+
+.homeBodyInfoContr {
+    font-size: clamp(17px, 5px + 30vw, 10px);
+}
+
+.subHeadingText {
+    color: #919191;
+    background-color: pink;
+}
+
+.homeFooterContr {
+    background-color: black;
+    color: white;
+}
+
+.footerInfoContr {
+    background-color: none;
+    height: 307px;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    padding-right: 200px;
+
+    font-size: 100%;
+    list-style-type: none;
+
+}
+/* trying to seperate the 3 coloumns in the footer by adding a class to the 3 column divs.  */
+.footer-column {
+    width: fit-content;
+    display: flex;
+    padding-right: 30%;
+    padding-left: 90px;
+
+}
+
+.footer-contact {
+    text-align: center;
+}
+
+.footer-login {
+    margin-top: 263px;
+}
+
+/* Main Image for Home screen */
+
+.top-row {
+    height: 397px;
+}
+
+.pool-image {
+    height: 408px;
+    width: 100%;
+    background: url('../images/pool.jpg') no-repeat center;
+    /* I can't fit the image correctly. Should i use another image or is there a way to reduce size? 
+    ** I've now changed the picture to a free one online from 'Free images' this is now too small but way better quality. */
+}
+
+.pool-2-image {
+    height: 408px;
+    width: 100%;
+    background: url('../images/pool2.webp') no-repeat center;
+}
+
+/* 2 image containers at 45% each */
+.top-column {
+    float: left;
+    width: 45%;
+    padding: 5px;
+    margin-left: 2.5%;
+}
+
+/* clear floats after image containers */
+
+.top-row::after {
+    content: "";
+    clear: both;
+    display: table;
+    /* margin-top: 300px; */
+}
+
+/* Section below main image ref; reasons to stay */
+
+#why-stay-section {
+    height: 800px;
+}
+
+#why-stay-section h2 {
+    font-size: clamp (3px, 3px + 20vw, 30px);
+    text-align: center;
+    text-transform: uppercase;
+
+    padding-top: 30px;
+    padding-bottom: 20px;
+    border-bottom: rgb(240, 255, 241) solid 5px;
+}
+
+#why-stay-section h5 {
+    font-size: 120%;
+    text-align: center;
+
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+/* Accommodation Pictures */
+
+/* 3 image containers at 33.33% each */
+.column {
+    float: left;
+    width: 30%;
+    padding: 5px;
+}
+
+/* clear floats after image containers */
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.row {
+    padding-left: 3%;
+    margin-left: 2%;
+}
+
+#bedroom-img {
+    height: 350px;
+    width: 100%;
+    background: url('../images/bedroom.jpg');
+}
+
+#kitchen-img {
+    height: 350px;
+    width: 100%;
+    background: url('../images/kitchen.jpg');
+}
+
+#lounge-img {
+    height: 350px;
+    width: 100%;
+    background: url('../images/lounge.jpg');
+}
+
+
+/* Rooms Section */
+
+#rooms-section {
+    background-image: url(../images/beach-image-2.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    max-width: 100%;
+    overflow: hidden;
+    margin-top: 62px;
+}
+
+#rooms-section div {
+    color: ivory;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 33.3%;
+    max-height: 400px;
+    float: left;
+    padding: 42px 0px 0px 1px;
+    text-align: center;
+    border: 2px solid ivory;
+    box-sizing: border-box;
+    text-transform: uppercase;
+}
+
+#rooms-section label {
+    background-color: #344a72;
+    color: ivory;
+}
+
+#rooms-section a {
+    font-size: xx-large;
+}
+/* Bookings page */
+
+.bookings-section {
+    height: 700px;
+    min-width: none;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+#beach-img {
+    height: 500px;
+    min-width: none;
+    background: url('../images/beach2.webp')no-repeat center;
+    object-fit: cover;
+}
+
+#bookings-h2 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: clamp (20px, 10px + 10vw, 30px);
+}
+
+#bookings-h5 {
+    font-size: clamp(10px, 5px + 10vw, 20px);
+    text-align: center;
+    margin-left: 68px;
+    margin-right: 68px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: center;
+}
+
+
+/* Bookings page - lower */
+
+.bookings-bg {
+    background-image: url('../images/background.jpeg');
+    height: 700px;
+    max-width: 1120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 50px;
+    margin-left: 170px;
+
+}
+
+.booking-form {
+    width: 700px;
+    height: 700px;
+}
+
+.booking-form-text {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.booking-form-text p {
+    color: white;
+    font-family: 'Mouse Memoirs', sans-serif;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.booking-main-form {
+    width: 700px;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-around;
+    align-content: flex-end;
+}
+
+
+.booking-main-form input {
+    width: 100%;
+    display: block;
+    font-family: 'Mouse Memoirs', sans-serif;
+    background: none;
+    border: 1px solid rgb(248, 23, 80);
+    color: white;
+    outline: none;
+}
+
+.booking-main-form div select {
+    width: 100%;
+    font-family: 'Mouse Memoirs', sans-serif;
+    background: none;
+    border: 1px rgb(248, 23, 80);
+    font-size: 20px;
+    color: white;
+}
+
+.booking-main-form div span {
+    width: 100%;
+    font-family: 'Mouse Memoirs', sans-serif;
+    color: white;
+    font-size: 25px;
+}
+
+/* Submit */
+
+#submit {
+    width: 80%;
+    margin: 24px 24px;
+    text-align: center;
+}
+
+#submit input {
+    font-family: 'Mouse Memoirs', sans-serif;
+    width: 200px;
+    background-color: rgb(248, 23, 80) !important;
+    color: white !important;
+    transition: all .3s;
+}
+
+#submit input:hover {
+    font-family: 'Mouse Memoirs', sans-serif;
+    width: 200px;
+    background-color: orange !important;
+    color: white !important;
+}
+
+#submit input:active {
+    font-size: 19px;
+    background-color: rgb(0, 38, 255) !important;
+    color: white !important;
+}
+
+/* Sign Up page */
+
+.signup-section {
+    /* This worked to increase space between footer border and sign up section */
+    margin-bottom: 200px;
+    padding-bottom: 20px;
+}
+
+.signup-section h2 {
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: white 2px solid;
+    margin-top: 25px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    color: white;
+}
+
+.signup-box {
+    background-color: orange;
+
+}
+
+.s-m-links {
+    text-align: center;
+    list-style-type: none;
+    height: 100px;
+    border-top: white 2px solid;
+    padding-top: 5%;
+}
+
+.s-m-links>li {
+    display: inline;
+}
+
+.s-m-links i {
+    font-size: 200%;
+    color: ivory;
+    padding-left: 7%;
+    padding-right: 7%;
+    margin: 1%;
+}
+
+/* The below media query will edit mobile screens */
+
+
+@media screen and (max-width: 1100px) {
+    .bookings-section {
+        width: 100%;
+        height: 824px;
+    }
+
+    .navbarClass {
+        height: 0px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        border-bottom: 100px;
+        flex-wrap: wrap;
+        align-content: flex-end;
+        align-items: baseline;
+    }
+}
+
+@media screen and (max-width: 735px) {
+    .navbar-div {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 655px) {
+    .navbar-div {
+        width: 122%;
+    }
+
+    #beach-img {
+        width: 120%;
+    }
+
+    #bookings-h2 {
+        margin-right: -118px;
+    }
+
+    #bookings-h5 {
+        min-width: fit-content;
+        margin: 0 auto;
+    }
+
+    .bookings-section-2 {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    header {
+        width: 100%;
+    }
+
+    .navbarLinks {
+        display: flex;
+    }
+
+    #menu {
+        height: 0px;
+        padding-right: 90px;
+    }
+
+    .nav-item {
+        margin-left: -34px;
+    }
+
+    #logo {
+        margin-left: -72px;
+    }
+
+    #rooms-section {
+        margin-top: 92px;
+    }
+
+    #bookings-h2 {
+        font-size: smaller;
+        text-align: center;
+        float: left;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .bookings-bg {
+        margin-left: 1px;
+    }
+
+    form {
+        margin-left: -53px;
+    }
+
+    .form-2 {
+        margin-left: 5px;
+    }
+
+    .pool-2-image {
+        display: none;
+    }
+
+    .pool-image {
+        width: 208%;
+    }
+}
+
+
+
+/* @media screen and (max-width: 730px) {
+    #logo {
+        font-size: 164%;
+        height: 45px;
+    }
+
+    #menu {
+        display: flex;
+        margin-left: -263px;
+        flex-wrap: nowrap;
+        align-content: center;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .nav-item {
+        margin: -180px;
+        font-size: 70%;
+        margin: -117px;
+    }
+
+    .navbar-div {
+        height: 139px;
+    }
+
+    .top-column {
+        height: 100px;
+        margin-top: 11%;
+    }
+
+    .pool-image {
+        height: 410px;
+    }
+
+    .pool-2-image {
+        height: 410px;
+    }
+
+    #why-stay-section {
+        height: 576px;
+    }
+
+    #why-stay-section h5 {
+        font-size: 50%;
+        margin-left: -145px;
+        padding-right: 45px;
+        line-height: 16px;
+    }
+
+    .homeBodyInfoContr {
+        height: 200px;
+    }
+
+    #why-stay-title {
+        margin-top: 1px;
+    }
+
+    .s-m-links {
+        width: 682px;
+        margin-left: -1px;
+        padding-right: 70px;
+        padding-left: 17px;
+    } */
+
+/* bookings page on 730px screen size */
+
+/* #beach-img {
+        height: 375px;
+    }
+
+    .bookings-section {
+        height: 478px;
+    }
+
+    #bookings-h2 {
+        font-size: 145%;
+    }
+
+    #bookings-h5 {
+        margin-left: 0;
+        margin-right: 0;
+        font-size: 95%;
+    }
+
+    .bookings-bg {
+        margin-left: 5px;
+    } */
+
+/* sign up page for 730px max screen */
+
+/* .signup-section {
+        height: 473px;
+    }
+} */
+
+/* @media screen and (max-width: 375px) { */
+
+
+/* header {
+        height: 90px;
+        margin-top: 20px;
+    } */
+
+/*  #logo {
+        height: 48px;
+        border-bottom: none;
+        font-size: 168%;
+        word-spacing: 2px;
+        margin-top: 5px;
+        padding: 0;
+
+    } */
+
+/*    #menu {
+        min-height: 70px;
+        font-size: 60%;
+        margin: 0;
+        padding: 0;
+    }
+
+    #menu li {
+        width: 200%;
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+
+    .navbar-div {
+        font-size: 6px;
+        padding-right: -3px;
+        height: 32px;
+    }
+
+    .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .top-column {
+        width: 80%;
+        margin-right: 35px;
+        padding-top: 46px;
+    }
+
+    .pool-image {
+        width: 114%;
+        height: 390px;
+    }
+
+    .pool-2-image {
+        display: none;
+    }
+
+    .top-row {
+        height: 30px;
+    }
+
+    .homeBodyInfoContr {
+        height: 200%;
+        margin-bottom: 5px;
+        position: absolute;
+
+    }
+
+    #why-stay-section {
+        height: 242px;
+    }
+
+    #why-stay-section h2 {
+        font-size: 25px;
+        height: 360px;
+        border-bottom: #344a72;
+    }
+
+    #why-stay-section h5 {
+        margin-left: -1%;
+        margin-right: 1%;
+        margin-top: 20%;
+        padding-left: 1px;
+        font-size: 7px;
+        width: 100%;
+        line-height: 13px;
+    }
+
+    .column {
+        height: 350px;
+        position: fixed;
+        width: 50%;
+        display: none;
+    }
+
+    .s-m-links {
+        margin-top: 315px;
+        border-color: #344a72;
+        margin-right: 44px;
+    }
+
+    bookings page at 375px max width
+
+    #beach-img {
+        height: 332px;
+    }
+
+    #bookings-h2 {
+        font-size: 21px;
+    }
+
+    #bookings-h5 {
+        font-size: 11px;
+        width: 80%;
+        margin-left: 30px;
+        padding-right: 3px;
+    }
+
+    .bookings-section {
+        height: 432px;
+    }
+
+    .bookings-section-2 {
+        height: 265px;
+        width: inherit;
+        display: revert;
+        margin-left: -169px;
+        margin-bottom: 3px;
+    }
+
+    .footer-page-2 {
+        height: 100px;
+        background-color: #344a72;
+        width: 100%;
+        margin-left: -9px;
+        padding-right: 10px;
+    }
+
+    .bookings-bg {
+        height: 572px;
+        width: 71%;
+        margin-left: 110px;
+    }
+
+    .booking-form {
+        height: 690px;
+    }
+
+    .booking-form-text {
+        padding-top: 1PX;
+    }
+
+
+
+    .signup-section {
+        height: 337px;
+        margin-top: -99px;
+    } */
+/* } */

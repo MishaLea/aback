@@ -1,15 +1,261 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="assets/css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home and Accommodation</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+    <style>
+        #logo {
+            font-size: clamp(2rem, 1rem + 5vw, 5rem);
+            
+        }
+
+        .Navbar-logo {
+            text-decoration: none !important;
+        }
+
+        #menu {
+            font-size: clamp (10px, 10px + 50vw, 100px);
+        }
+
+        #menu li {
+            list-style-type: none;
+            float: left;
+            /* margin-left: 300px; */
+            padding-left: 104px;
+            text-align: center;
+            /* color: ivory; */
+        }
+
+        #menu a {
+            text-decoration: none;
+        }
+
+        #menu a:hover {
+            border-bottom: ivory 2px solid;
+            border-top: ivory 2px solid;
+        }
+
+        .active {
+            color: ivory;
+            border-bottom: ivory 2px solid;
+        }
+
+        /* Nav bar font color to be changed to similar ivory. */
+
+        .navbar-div {
+            height: 230px;
+            border-bottom: white 2px solid;
+        }
+
+        .navbarClass {
+            height: 30px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            border-bottom: 100px;
+            align-content: center;
+        }
+
+        .navbarLinks {
+            display: flex;
+            align-items: center;
+            margin-left: -100px;
+        }
+
+        .navbarLinks>div {
+            color: ivory;
+        }
+
+        .navbarLinks a {
+            color: ivory;
+        }
+
+
+        .homeBodyInfoContr {
+            font-size: clamp(17px, 5px + 30vw, 10px);
+        }
+
+
+        .subHeadingText {
+            color: #919191;
+            background-color: pink;
+        }
+
+        .homeFooterContr {
+            background-color: black;
+            color: white;
+        }
+
+        .footerInfoContr {
+            background-color: none;
+            height: 307px;
+            width: 70%;
+            display: flex;
+            align-items: center;
+            padding-right: 200px;
+
+            font-size: 100%;
+            list-style-type: none;
+
+        }
+
+        .footer-column {
+            width: fit-content;
+            display: flex;
+            padding-right: 30%;
+            padding-left: 90px;
+
+        }
+
+        .footer-contact {
+            text-align: center;
+        }
+
+        .footer-login {
+            margin-top: 263px;
+        }
+
+        /* Main Image for Home screen */
+
+        .top-row {
+            height: 397px;
+        }
+
+        .pool-image {
+            height: 408px;
+            width: 100%;
+            background: url('../images/pool.jpg') no-repeat center;
+        }
+
+        .pool-2-image {
+            height: 408px;
+            width: 100%;
+            background: url('../images/pool2.webp') no-repeat center;
+        }
+
+        /* 2 image containers at 45% each */
+        .top-column {
+            float: left;
+            width: 45%;
+            padding: 5px;
+            margin-left: 2.5%;
+        }
+
+        /* clear floats after image containers */
+
+        .top-row::after {
+            content: "";
+            clear: both;
+            display: table;
+            /* margin-top: 300px; */
+        }
+
+        /* Section below main image ref; reasons to stay */
+
+        #why-stay-section {
+            height: 800px;
+        }
+
+        #why-stay-section h2 {
+            font-size: clamp (3px, 3px + 20vw, 30px);
+            text-align: center;
+            text-transform: uppercase;
+
+            padding-top: 30px;
+            padding-bottom: 20px;
+            border-bottom: rgb(240, 255, 241) solid 5px;
+        }
+
+        #why-stay-section h5 {
+            font-size: 120%;
+            text-align: center;
+
+            padding-left: 12px;
+            padding-right: 12px;
+        }
+
+        /* Accommodation Pictures */
+
+        /* 3 image containers at 33.33% each */
+        .column {
+            float: left;
+            width: 30%;
+            padding: 5px;
+        }
+
+        /* clear floats after image containers */
+
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .row {
+            padding-left: 3%;
+            margin-left: 2%;
+        }
+
+        #bedroom-img {
+            height: 350px;
+            width: 100%;
+            background: url('../images/bedroom.jpg');
+        }
+
+        #kitchen-img {
+            height: 350px;
+            width: 100%;
+            background: url('../images/kitchen.jpg');
+        }
+
+        #lounge-img {
+            height: 350px;
+            width: 100%;
+            background: url('../images/lounge.jpg');
+        }
+
+        /* Rooms Section */
+
+        #rooms-section {
+            background-image: url(../images/beach-image-2.jpeg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            max-width: 100%;
+            overflow: hidden;
+            margin-top: 62px;
+        }
+
+        #rooms-section div {
+            color: ivory;
+            background-color: rgba(0, 0, 0, 0.3);
+            width: 33.3%;
+            max-height: 400px;
+            float: left;
+            padding: 42px 0px 0px 1px;
+            text-align: center;
+            border: 2px solid ivory;
+            box-sizing: border-box;
+            text-transform: uppercase;
+        }
+
+        #rooms-section label {
+            background-color: #344a72;
+            color: ivory;
+        }
+
+        #rooms-section a {
+            font-size: xx-large;
+        }
+    </style>
 </head>
 
 <body>
@@ -46,7 +292,8 @@
                 <img class="pool-image"> <!-- src="../front/assets/images/pool.jpg" alt="pool and sunbeds" -->
             </div>
             <div class="top-column">
-                <img class="pool-2-image"> <!-- src="../front/assets/images/pool2.webp" alt="Woman with sunhat and sunglasses" -->
+                <img class="pool-2-image">
+                <!-- src="../front/assets/images/pool2.webp" alt="Woman with sunhat and sunglasses" -->
             </div>
         </div>
     </section>
@@ -85,21 +332,24 @@
             <button type="submit"> <a href="/project4/templates/authentication/bookings.html"> Book Here</a></button>
             <button type="submit"> Sign In</button>
             <button type="submit"> Log In </button>
-            <label class="label-text" onclick="_functions()"><a href="#"><i class="fa-solid fa-circle-check"></i></a></label> 
+            <label class="label-text" onclick="_functions()"><a href="#"><i
+                        class="fa-solid fa-circle-check"></i></a></label>
         </div>
         <div>
             <h2>Deluxe Room</h2>
             <h3>£110 p/n</h3>
             <h3>5 persons</h3>
             <h3>Sea Views</h3>
-            <label class="label-text" onclick="_functions()"><a href="#"><i class="fa-solid fa-circle-check"></i></a></label> 
+            <label class="label-text" onclick="_functions()"><a href="#"><i
+                        class="fa-solid fa-circle-check"></i></a></label>
         </div>
         <div>
             <h2>Deluxe Room 2</h2>
             <h3>£115 p/n</h3>
             <h3>£110 p/n</h3>
             <h3>Pool Views</h3>
-            <label class="label-text" onclick="_functions()"><a href="#"><i class="fa-solid fa-circle-check"></i></a></label> 
+            <label class="label-text" onclick="_functions()"><a href="#"><i
+                        class="fa-solid fa-circle-check"></i></a></label>
         </div>
     </section>
     <!-- Footer -->
