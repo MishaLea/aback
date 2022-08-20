@@ -13,7 +13,8 @@ if os.environ.get("DEVELOPMENT") == "True":
     app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get("DB_URL")
 else:
     uri = os.environ.get("DATABASE_URL")
-    if uri = uri.replace("postgres://", "postgrsql://", 1)
+    if uri.startswith("postgres://"):
+        uri = uri.replace("postgres://", , "postgresql://", 1) 
 app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get("DATABASE_URL")
 
 db = flask_SQLAlchemy(app)
