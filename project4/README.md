@@ -13,6 +13,7 @@ User Experience
 -	Fixed Bugs
 -	Deployment
 -	Credits
+
 UX Design 
 
 Strategy: 
@@ -50,6 +51,7 @@ Functional Specifications
 
 Standard Features to include: 
 -	Navigation links as well as footer with social media links on home and bookings page. The Sign in and log in form pages will have a footer but no nav links on top of page. 
+-   The home page will include 3 different room options including price and specific view request. Each room has a link which will redirect to the bookings form page. 
 -	The bookings page will include links for contact us as well as T&C’s. 
 -	On the bookings page will also include a form that allows the user to make/edit/cancel a booking. As well as confirm any unavailable dates. 
 -	The Sign in page will allow the user the option to register with us for special offers and discounts for future bookings. 
@@ -68,4 +70,75 @@ Structure:
 -	The bookings page will start off with an medium/large sized image leading in to the information regarding bookings and links to Contact Us and Terms and Conditions. This leads in to the booking form, with the footer ending the 2nd browser page. 
 -	The Sign/Up and Login pages will look similar with same layout. A footer will be on the lower section of both pages with links to either login on sign up page or log out on log in page. 
 
-![pool data](/repository/templates/authentication/pool.jpg raw=true "pool.img")
+
+Surface: 
+
+Colour Pallete:
+The colours I chose all correlate together and can be used interchangebly. For simplcity, the main theme is the dark blue is the background colour for the body with Ivory being used for borders and most text. 
+
+
+
+Typography: 
+For the majority of the text content, im using Josefin Sans (italic) with Sans Sarif as back up. For the Booking Form, I wanted to create a standout section that still corresponds with the overall appeal of the design, by using Mouse Memoirs in the Booking Form only. 
+I imported the fonts from google fonts to css. 
+
+Icons
+The icon used throughout the web app are provided by fontawesome. This was included in the HTML pages. 
+
+Pictures: 
+All pictures have been utilised via pixels.
+
+Django 
+Created Django – Project name: Project4 
+-	In project, created 2 separate, independent apps – Accounts & Rooms. 
+-	Accounts App – focuses on user login, signup and similar authentication features. 
+-	Room App – focuses on listing rooms, adding rooms and amending bookings. 
+-	High Level Architecture
+
+Accounts App: 
+-	I wanted a system in which we could authenticate if a user is valid based on email/password. 
+-	Django’s default authentication is username and password, so in order to get around that – we override the user table which Django provides. 
+-	To do this, a new table was created in models.py. 
+-	Also added extra functions to create users and superusers. (Helper Functions) 
+-	By doing this, we override default behaviour and our system now authenticates. 
+-	We created 2 routes in urls.py (in accounts directory)
+-	URL Patterns are: 
+1)	Login route
+2)	Signup route
+-	In routes, I wrote logic for each route, so they know what to do. 
+-	For that, 2 functions were created – one for login and one for signup. 
+Login Function 
+-	Authenticate login Checks if request is POST and either extracts email & password from post and authorises using predetermined method. 
+-	Backend.py shows auth method and get user method.  
+-	When written it will call method and logic checks if valid or not. 
+Logic on line 19 will direct to home page. If not correct, will redirect to login page. 
+
+Similar for sign up 
+Authenticate by overriding Django predetermined templates. 
+
+In Rooms
+Created multiple routes;
+-add.rooms		add new room
+-get_rooms		search room info
+-get_all_rooms		list all rooms
+
+Have written methods in views.py
+
+New table called ‘rooms’ in models.py inc room no, prices etc…
+
+Initial Testing: 
+n/a
+
+
+Fixed Bugs: 
+n/a
+
+
+Deployment: 
+Heroku deployment 
+
+
+Credits:
+pixels.com used for the images on the browser. 
+fontawesome.come used for icons. 
+fontgoogle used for font style.
