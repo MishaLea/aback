@@ -4,6 +4,7 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from .models import Account
 from django.views.decorators.csrf import csrf_exempt
+from rooms.views import Home
 
 # open the login page in start
 def startPoint(request):
@@ -18,8 +19,8 @@ def login(request):
     user = authenticate(email=userEmail, password=password)
     if user is not None:
       messages.success(request, "Welcome!")
-      # return render(request, "authentication/index.html")
-      return redirect("/home/")
+      return render(request, "authentication/index.html", {"login": True})
+      # return redirect(Home)
     else:
       messages.error(request, "Failed to login")
       return JsonResponse({"results": False})

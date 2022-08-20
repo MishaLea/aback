@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@1&display=swap" rel="stylesheet">
-    <link href="style.css" type="text/css">
+    <link href="{% static 'style.css' %}" type="text/css">
     </link>
     <style>
         .login-box {
@@ -123,10 +124,11 @@
                 body: formData
             };
 
-            fetch("https://8000-mishalea-aback-vyy3649uck1.ws-eu62.gitpod.io/login/", options)
+            fetch("https://8000-mishalea-aback-sv7s53utyyg.ws-eu62.gitpod.io/login/", options)
                 .then(res => res.json())
                 .then(response => {
                     console.log(response)
+                    // window.location.href = "/home"
                 })
         }
     </script>
